@@ -30,7 +30,10 @@ const repoInformationHTML =(repos) =>{
     </div>`
 }
 
+
 const fetchGitHubInformation = (event) => {
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
   let username = $("#gh-username").val();
   if (!username) {
     $("#gh-user-data").html(`<h2>Please enter a Github username</h2>`);
@@ -64,3 +67,5 @@ const fetchGitHubInformation = (event) => {
     )
   ;
 };
+
+$(document).ready(fetchGitHubInformation);
